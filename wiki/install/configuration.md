@@ -24,7 +24,7 @@ Wiki.js offers various authentication providers that you can enable. See the [au
 | Property            | Required | Description                                                                                                                          |   Default Value  |
 |---------------------|:--------:|--------------------------------------------------------------------------------------------------------------------------------------|:----------------:|
 | **public**          | yes      | Should the wiki be accessible publicly without a login. If set to true, creates a Guest user whose access can be configured in the Users Settings. Set to false to require all users to login before accessing any wiki content. | false |
-| **defaultReadAccess**          | yes      | Should users that logged in using a social authentication provider have read-only access by default. | false |
+| **auth.defaultAccess**          | yes      | Whether users logging in through an enabled external authentication provider without an existing wiki account should have an account created with `read` or `write` access. Set to `false` to deny access to users without an existing wiki account. (Users logging in through LDAP / AD or Azure will still get accounts with read access.) | false |
 | **auth.local.enabled**          | no | Enable the local authentication provider. | true |
 | **auth.google.enabled**         | no | Enable the Google authentication provider | false |
 | **auth.google.clientId**        | no | Google client ID that uniquely identify your app. | |
